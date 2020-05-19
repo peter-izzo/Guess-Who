@@ -1,0 +1,59 @@
+*{
+    text-align: center;
+}
+.title{
+    margin-bottom: 1em;
+}
+p{
+    color:white
+}
+
+.btn,
+label{
+    margin-top: 1em;
+}
+
+.grey-out:before{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* ****** Box Styling ******** */
+
+
+img{
+    width: 100px;
+    height: 200px;
+}
+
+.second{
+    margin-top: 2em;
+}
+
+.red{
+    background: red;
+}
+
+.blue{
+    background: blue;
+}
+
+.yellow{
+    background: yellow;
+}
+
+.pink{
+    background: pink;
+}
+
+.orange{
+    background: orange;
+}
+.grey{
+    background: grey;
+}
+.black{
+    background: black;
+}
+.green{
+    background: green;
+}
