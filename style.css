@@ -8,13 +8,21 @@ p{
     color:white
 }
 
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
 .btn,
 label{
     margin-top: 1em;
 }
 
-.grey-out:before{
-    background: rgba(255, 255, 255, 0.5);
+.grey-out{
+    background: black!important;
 }
 
 /* ****** Box Styling ******** */
