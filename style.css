@@ -5,11 +5,16 @@
     margin-bottom: 1em;
 }
 p{
-    color:white
+    color:white;
+    background: black;
 }
 
 ul{
     padding: 0;
+}
+
+.fas{
+    color: #32cd32;
 }
 
 li{
@@ -29,7 +34,7 @@ label{
 
 
 img{
-    width: 100px;
+    width: 150px;
     height: 200px;
 }
 
