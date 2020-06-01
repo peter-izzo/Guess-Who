@@ -1,4 +1,4 @@
-var pic = document.querySelectorAll('.pic');
+let pic = document.querySelectorAll('.pic');
 const button = document.getElementById("button");
 const ul = document.querySelector("ul");
 const li = ul.getElementsByTagName("li");
@@ -34,31 +34,29 @@ const peppa = new GameCharacter('Peppa', 'red', false, 'female');
 //character objects added to an array
 const characterArray = [mario, link, luigi, samus,dio, hillary, mario_lopez, peppa];
 
-
-/*  trying to come up with a function to use as
-//  a callback for the characterArray looping.
-//  thinking something that will use the this.name
-//  to pull the objects name and then creating a div with
-//  a class of the objects name
-*/
-const addToDiv = x => x = this.name
-
-//loops through characterArray and creates a div with class name === it's name
-//HAVE TO USE arrayObject.name OTHERWISE DIVS WON'T BE STRINGS
-characterArray.forEach(addToDiv);
-
+//picks a character from the array at random
+const characterPicker = characterArray[Math.floor(Math.random() * characterArray.length)];
 
 
 function inputLength(){
     return input.value.length;
 }
 
-// Adds guesses to an unordered list the
+// Adds guesses to an unordered list for tracking traits
 function createTraitListElement() {
     let li = document.createElement("li");
+    // check element 
+    let check = document.createElement('i');
+    check.className = 'fas fa-check-circle';
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
     input.value = '';
+    //adds a 'check' next to correctly guessed trait
+    //if (characterPicker.hasOwnProperty(input.value)) {
+        li.appendChild(check);
+        check.style.margin = "5px";
+    //}
+
 
 }
 
@@ -87,8 +85,14 @@ function addListAfterKeyPress(event) {
     }
 }
 
+const trying = function test(e) {
+
+}
+
 
 //Event Listeners for trait guessing
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeyPress);
+
+console.log(characterPicker);
